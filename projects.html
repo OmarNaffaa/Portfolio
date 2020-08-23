@@ -274,10 +274,31 @@
 	<h2 id="3" class="sectionTitle"> Location Finder </h2>
 	<h3 class="dateLabel"> Technologies Used: C#, Visual Studio </h3>
 	<p>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
-		[ Content ]
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	</p>	
+		The location finder project shown is a C# Windows Form Application that aims to find an optimized path to traverse through
+		a set of coordinates. Assuming there is a pool repair man at the top-left corner (coordinates (0,0)) the program displays the
+		order in which the person should travel to reach all the "pools" with the least amount of distance to get the temperature of the 
+		pool. This is done by calculating the nearest direct path from the current destination of the repair man to a next destination.
+	</p>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<div style="margin-left: 2%; margin-right: 2%;" id="divAltColor">
+		<img src="LocationFinder/LocationFinderMainPage.png" alt="Location Finder Main Page" style="width:94%;height:auto;margin:2%;">
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<p>
+		In the default configuration shown belowthe repair man would have to traverse the pools in the order "B, C, G, A, F, E,  
+		D" to reach the pools in the most efficient way using a "nearest-first" algorithm. The program calculates these values during
+		runtime, so by clicking the "randomize pool layout" button at the top right corner of the page the location of each pool can
+		be shuffled and the values will be recalculated and redisplayed. The graphical user interface will update according this this
+		"reshuffling" and show the pools in the correct locations for accurate visualization. An additional feature associated with this
+		program is the randomization of the pool temperatures. In conjunction with assigning random locations to the pools a random temperature
+		is assigned within the bounds of 98 and 104 degrees.
+		<br><br>
+		The full source code for this project can be viewed <strong><a href="https://github.com/OmarNaffaa/LocationFinder"> here </a></strong>
+	</p>
 	
 	<!-- Next Project Arrow Script -->
 	<script>
