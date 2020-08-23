@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	
+<head>
+	<title>Omar Naffaa</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="navbar.css">
+	
+	<!-- Icon Library Sheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Google "Arsenal" and "Quicksand" Font -->
+	<link href='https://fonts.googleapis.com/css?family=Arsenal' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+	
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fa fa-bars"></i>
+		</label>
+		
+		<a style="border-bottom: none;" href="index.html"><label class="logo"><img src="Logo.png" alt="ONaffaa" style="width:80px;height:80px;"></label></a>
+		
+		<ul>
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="experience.html"> Work Experience </a></li>
+			<li><a href="projects.html"> Projects </a></li>
+			<li><a href="web/viewer.html?file=NaffaaOmar_Resume_August2020.pdf"> View Resume </a></li>
+		</ul>
+	</nav>
+	
+	<!-- Title -->
+	<h1 class="pageTitle"> Work Experience </h1>
+	
+	<!-- Niagara Systems Engineering Experience Section -->
+	<h2 class="sectionTitle"> Systems Engineering Intern: Niagara Bottling </h2>
+	<h3 class="dateLabel"> May 2020 - Present </h3>
+	<p>
+		[ Add Content ]
+	</p>
+	
+	<!-- Niagara IT Experience Section -->
+	<h2 class="sectionTitle"> Warehouse Management Systems Intern: Niagara Bottling </h2>
+	<h3 class="dateLabel"> June 2019 - August 2019 </h3>
+	
+	<p>
+		During the summer of 2019 I had the opportunity of interning at Niagara Bottling as a member of the Warehouse Management Systems (WMS) team
+		within the IT department. The purpose of this team is to create and maintain the technology used in the bottling plants and	warehouses within
+		the company. During the summer, interns at Niagara are given a primary project to complete along with other secondary projects that are done
+		alongside the main project. In my case, my main project for the summer was to create a low-cost proof of concept self checkout system for truck
+		drivers exiting the plant.
+		<br><br>
+		The way the current exit system is designed opens the warehouse exit gate automatically based on a proximity sensor, which lets trucks leave the
+		company site without being accounted for. This, in turn, created a lot of logistic issues because more often than not truck drivers leave the
+		facility without picking up their paperwork. To overcome these issues, my team and I created a system where a self checkout system would scan a
+		QR code that is present on the paperwork the truck driver must pick up before leaving in order to open the gate, which ensures the truck driver
+		leaves with all of their paperwork. The QR code on the paper will be generated at check in for a specific driver with a unique value, which will
+		be sent a JSON payload using the REST API that will be used by the company to account for exiting truck drivers.
+	</p>
+	
+	<div class="grid-container">
+		<img src="NiagaraInternship_2019_Images/RaspberryPi.jpg" alt="Raspberry Pi" style="width:100%;height:auto;">
+		<p>
+			To keep costs low for our proof of concept, I elected to use a generic USB web-camera present within the company to scan the QR code and a
+			<strong>Raspberry Pi</strong> as the central embedded system for the system, which cost less than $50 total. To ensure no unnecessary fees were incurred for
+			this proof of concept, all the software features that were not programmed in-house were implemented using open source external libraries, which
+			allowed us to develop the software for the system without having to pay extra fees.
+			<br><br>
+			<u>The software libraries used for this project include:</u>
+			<br><br>
+			<strong> OpenCV (C++) </strong>: <br>
+			Computer Vision was utilized to allow an ordinary webcam to read and parse the QR code image that is captured by the program. Using this library
+			along with generic camera hardware reduced the cost that comes with specialty equipment while allowing the application to utilize the internal
+			webcam present in the ruggedized Windows tablet that would be used as the end product.
+			<br><br>
+			<strong> GTK+-3.0 (C/C++) </strong>: <br>
+			This library was used to create a UI for the proejct using C/C++, which was needed since the computer vision code was written in C++. This library
+			allowed the entire codebase to be written in C++, which greatly improved the performance of the system.
+			<br><br>
+			<strong> JSON-C / cURL (C++) </strong>: <br>
+			These libraries were necessary to allow the application to communicate with the company server using REST API. Since C++ has no native protocols 
+			to send JSON messages these libraries were required to implement a system to send information from the application to an external destination
+			over the network.
+		</p>
+	</div>
+	
+	<p style="margin-top: -30px;">	
+		When creating the interface a lot of design constraints had to be accounted for. Since the project would be used on a screen with unknown dimensions it was important
+		to create a responsive user interface that scales and adjusts to varying screens. GTK+-3.0 provides support for responsive design, and as a result the interface was configured
+		to scale appropriately whether it was on a large monitor or a 7 inch Windows tablet. Another important consideration was making sure the interface is intuitve and easy to use 
+		since truck drivers would be using the application at a relatively far distance. To solve this issue, the interface was designed with two large buttons with prominent icons that
+		trigger the program functions and direct prompt that can be read quickly. Finally, an administrator section was added to allow an operator to configure the system for each plant 
+		dynamically. Images of the interface are included below:
+	</p>
+	
+	<div class="grid-container">
+		<img src="NiagaraInternship_2019_Images/SelfCheckout_Homepage.png" alt="Homepage" style="width:100%;height:auto;">
+		<img src="NiagaraInternship_2019_Images/SelfCheckout_AdminPage.png" alt="Administrator Page" style="width:100%;height:auto;">
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<p>
+		In addition to this project, I worked with my team to update Integ JNIOR (Java Network Input Output Resource) automation controllers to send a signal when a new pallet of water
+		should be created. The system would communicate using the Modbus TCP/IP protocol to send information from the controller to a specified address. Updating the JNIORS in-house
+		eliminated the time delay of requesting an update from the company while also reducing the cost of updating the software using an outside resource. 
+	</p>
+	
+</body>
+
+</html>

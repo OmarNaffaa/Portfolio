@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	
+<head>
+	<title>Omar Naffaa</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="navbar.css">
+	
+	<!-- Icon Library Sheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Google "Arsenal" and "Quicksand" Font -->
+	<link href='https://fonts.googleapis.com/css?family=Arsenal' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+	
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fa fa-bars"></i>
+		</label>
+		
+		<a style="border-bottom: none;" href="index.html"><label class="logo"><img src="Logo.png" alt="ONaffaa" style="width:80px;height:80px;"></label></a>
+		
+		<ul>
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="experience.html"> Work Experience </a></li>
+			<li><a href="projects.html"> Projects </a></li>
+			<li><a href="web/viewer.html?file=NaffaaOmar_Resume_August2020.pdf"> View Resume </a></li>
+		</ul>
+	</nav>
+	
+	<!-- Title -->
+	<h1 class="pageTitle"> Projects </h1>
+	
+	<!-- Floating Arrow on Page -->
+	<p id="iter" style="display: none;"> 0 </p>
+	<button id="floatingButton" type="button" onclick="nextProject()"> &#8595; </button>
+	
+	<!-- --------------------------------- -->
+	<!-- 5G Self-Healing Network Simulator -->
+	<!-- --------------------------------- -->
+	<h2 id="0" class="sectionTitle"> 5G Self-Healing Network Simulator </h2>
+	<h3 class="dateLabel"> Technologies Used: C++, GTK+-3.0 </h3>
+	<p>
+		The purpose of this project is to simulate a network comprised of current technologies in order to test various self-healing and network 
+		management strategies in the hopes of implementing a digital network manager capable of detecting the “unhealthy/failing” cells present 
+		in a network to implement researched self-healing procedures. The simulator will accurately model channel conditions and model downlink 
+		communications between cellular towers and User Equipment (cell phones, computers, etc.). The project centers around determining the 
+		optimal algorithms implemented at the management level for achieving this result using the constraints introduced by the environment 
+		and technologies simulated.
+	</p>
+	
+	<div id="divAltColor" class="grid-container">
+		<img src="5G_SHN_Pictures/SystemArchitecture.png" alt="System Architecture" style="width:100%;height:auto;">
+		<p>
+			During runtime the project goes through those 3 different stages: the initalization phase, simulation phase, and finally the output phase.
+			The programmed simulator takes in a pre-generatred array of Signal to Noise Ratio values from MATLAB and uses it within the C++ simulator.
+			The entire simulator is programmed in C++, and is composed of an interface programmed in GTK+-3.0 that allows the user to create a network
+			environment, enter network parameters for the simulation, and generate large amounts of CSV sheets that log the performance of the system.
+			A high level architecture diagram shows these phases.
+		</p>
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<p>	
+		During the initalization phase the user can dynamically create a network structure with cellular towers represented by numbered hexagons by
+		clicking on the edge they would like to instantiate the tower from relative to the already placed towers. The user can also specify the
+		"health" of the tower as 1 of 4 states (Healthy, User Congested, Demand Congested, Failing).
+	</p>
+	
+	<div id="divAltColor" class="grid-container">
+		<p>
+			The hexagons represent a sample network that was instantiated, and the numbers placed at the center of the hexagons represent the order 
+			in which the hexagons were created by the user.
+			<br><br>
+			<u> The following conditions are depicted in the image: </u>
+			<br><br>
+			<strong> Healthy </strong>: <br>
+			Celluar Towers 0, 1, 3, and 5
+			<br><br>
+			<strong> User Congested </strong>: <br>
+			Celluar Tower 2
+			<br><br>
+			<strong> Demand Congested </strong>: <br>
+			Celluar Tower 6
+			<br><br>
+			<strong> Failing </strong>: <br>
+			Celluar Tower 4
+			<br><br>
+			The currently selected hexagon will be a darker shade of the color it is configured to (e.g. cellular tower 0 is a darker green because it
+			is selected). Additional cellular towers are instantiated by moving the cursor to where you would like to add additional towers, which will
+			be indicated by a red highlight on the edge of the hexagon the newly added hexagon will be appended to. In the image, cellular tower 0 is
+			highlighted on the edge where cellular tower 5 is placed, so if cellular tower 5 is not present and the user clicks a new cellular tower
+			will be appended to that edge.
+		</p>
+		<img src="5G_SHN_Pictures/5G_SHN_3.png" alt="tower structure" style="width:100%;height:auto;">
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<div class="grid-container">
+		<img src="5G_SHN_Pictures/5G_SHN_2.png" alt="parameter entry" style="width:100%;height:auto;">
+		<p>
+			After creating the cellular tower network the user will be navigated to a page that lets them enter network parameters that will be used to set 
+			up the simulation. The required parameters are split into 3 categories: <u> Network Parameters, Simulation Parameters, and Self-Healing
+			Parameters. </u>
+			<br><br>
+			<strong> Network Parameters</strong>: <br>
+			Cellular Tower (BS) side length, Antennas per cellular tower, number of transceiver per antenna, and devices (UE) connected per antenna
+			<br><br>
+			<strong> Simulation Parameters </strong>: <br>
+			Length of simulation, number of simulations, the simulation starting number, and a field to specify a save name for the simulation output files
+			<br><br>
+			<strong> Self-Healing Parameters </strong>: <br>
+			Buffer size (used to determine how much data will be analyzed to perform self-healing in real-time)
+			<br><br>
+			Once these parameters are configured, clicking the "Run Simulation" button will begin the simulation process. Clicking the "Back" button allows you
+			to navigate back to the previous page. Note that both windows are responsive and can scale to fit multiple screen sizes.
+		</p>
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<p id="divAltColor" style="margin-bottom: 10px">
+		Once the simulation completes, a large number of CSV output files will be generated in the same directory as the project. This data is currently being used
+		for big data analytics. To view the full write-up for this project, <strong><a href="web/viewer.html?file=5G_SHN_Report.pdf"> click here. </a></strong>
+	</p>
+	
+	<!-- ----- -->
+	<!-- DROWT -->
+	<!-- ----- -->
+	<h2 id="1" class="sectionTitle"> Decentralized Renewable Wastewater Treatment System (DROWT) </h2>
+	<h3 class="dateLabel"> Technologies Used: Java, Android Studio, REST, JSON </h3>
+	<div class="grid-container">
+		<img src="DROWT_Pictures/AndroidStudioLogo.png" alt="Android Studio Logo" style="width:100%;height:auto;">
+		<p>
+			This project presents the development of a mock control system for an automated, self-sustaining, decentralized water treatment plant called 
+			<strong>"DROWT"</strong> for short. The system is composed of an Arduino microcontroller MKR1000 and an array of sensors linked to a mobile application 
+			to monitor different aspects of the system. The application lets the end user monitor the entire system and grants access to the control of certain 
+			sensors. The system communicates with cloud based analytic software ThingSpeak to process and display system data on a mobile android application.
+			<br><br>
+			For this project I served as the sole developer of the mobile application. The application itself was developed entirely in Java using
+			Android Studio and standard material design principles.
+		</p>
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<div id="divAltColor" class="grid-container">
+		<p>
+			From left to right the following pages are shown:
+			<br><br>
+			<strong> HomePage </strong>: <br>
+			This is the central page that appears once the user enters the application. It contains information from the water going to a preselected DROWT system,
+			including the temperature, flow rate, pressure, conductivity, and water tank specifications (height of container and amount filled). Two buttons are
+			placed at the bottom to navigate to the "Pump Control" and "System Select" pages.
+			<br><br>
+			<strong> Pump Control </strong>: <br>
+			Clicking the "Pump Controls" button from the homepage displays the current status of the pump and provides the user the option to turn the pump on or off 
+			remotely instead of having to do this in-person. Future controls are planned, so this page was added later in development to centralize all current and 
+			future controls in one place.
+			<br><br>
+			<strong> System Select </strong>: <br>
+			Using the "System Select" button on the homepage leads the user to a page that allows them to perform administrator functions within the application. The
+			user can type in the name of a system on the list and either select that system to display it's information on the other pages or click the "details"
+			button to view specific information about this system. Additionally, if a user types in the system name and clicks the "delete" button that system
+			will be removed from the list of systems on the app. If a system needs to be added to the list the user can click the "add" button and fill in the
+			appropriate information to add the system.
+		</p>
+		<img src="DROWT_Pictures/AllAppPages.png" alt="Android Studio Logo" style="width:100%;height:auto;">
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<div class="grid-container">
+		<img src="DROWT_Pictures/ThingSpeakImages.png" alt="ThingSpeakImages" style="width:100%;height:auto;">
+		<p>
+			Data set to the application is from our mock system (and vice versa) are sent using the ThingSpeak REST API service, which also logs data points sent
+			by the mock system.
+			<br><br>
+			This recorded data will be used by the Civil and Mechanical Engineering team who we collaborated on this project with. Uses include visualizing the data
+			and tracking / predicting irregularities within the system in order to make future improvements and optimizations.
+			<br><br>
+			Shown here are sample images taken from ThingSpeak that show the tracked temperature and tank fill level vs the date they were recorded.	
+		</p>
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->	
+	
+	<p id="divAltColor" style="margin-bottom: 10px">
+		This project was presented at COMPSAC 2019, a international IEEE Computer Society conference and later published in a peer reviewed journal through IEEE. 
+		To see the full publication <strong><i><a href="https://ieeexplore.ieee.org/document/8754287"> click here </a></i></strong>
+	</p>
+	
+	<!-- --------------- -->
+	<!-- Frequency Meter -->
+	<!-- --------------- -->
+	<h2 id="2" class="sectionTitle"> Frequency / Period Meter </h2>
+	<h3 class="dateLabel"> Technologies Used: Verilog, Xilinx Nexys A7 FPGA </h3>
+	
+	<p>
+		The purpose of the experiment was to create a frequency and period meter by combining 5
+		different modules. A display interface was designed to output to the 7-segment display by
+		multiplexing, which utilizes an effect known as Persistence of Vision (POV) to control all the
+		displays with 7 pins rather than the 56 that would be required to run all the displays.
+		<br><br> 
+		Afterwards, a display controller was created to take a 32 bit BCD value and loads
+		each set of 4 bits (BCD[3:0], BCD[7:4], etc.) into a register and multiplexes the contents of
+		the 8 registers onto the display by toggling the select bits on the display interface(WADD), 
+		register to load, and the enable (w) using a 3 bit counter. Additionally, a binary to BCD (B2BCD) 
+		module was used	to take a 10 bit number that represents either a frequency or period in binary and 
+		convert it to BCD. This is done by using a select to determine which value will be selected and sent 
+		to the display controller, then applying shifts and adding 3 until a comparator is greater than 4.
+		Once this condition is satisfied the 4 bit BCD numbers are captured and sent as a 32 bit BCD
+		value to the display controller. 
+		<br><br> 
+		Next a frequency meter was created by creating a module that counts the positive edges of an incoming 
+		signal and incrementing a counter, which is then captured in a register F and sent to the B2BCD module 
+		in order to be displayed. Finally, a period meter was designed by passing the negative edge of the 
+		frequency meter to the period meter in order to synchronize the two modules. The period module then 
+		measures the period	by starting the measurement at the a negative edge and incrementing a register "P" 
+		until the next negative edge is detected. The output is a frequency and corresponding period on the
+		7-segment display on the FPGA.
+	</p>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<div id="divAltColor" class="grid-container">
+		<img src="FrequencyPeriodMeter/BlockDiagram.png" alt="Block Diagram" style="width:100%;height:auto;">
+		<p>
+			The following image shows a high level block diagram of what was described above. 
+			<br><br>
+			The <strong> Frequency Meter </strong> and <strong> Period Meter </strong> blocks were connected to
+			a function generator present in our university labs and a Digital to Analog converter module attached to
+			our FPGA to generate a desired frequency and period. These values are then passed into the <strong> B2BCD 
+			</strong> module of the application, which decodes the 10 bit binary value representing the frequency 
+			and period into a 32 bit BCD value. The <strong> Display Controller </strong> module is used to translate 
+			and pass the value to the <strong> Display Interface </strong> module, which performs the multiplexing 
+			required to display our processed frequency and period from the connected function generator.
+		</p>
+	</div>
+	
+	<br><hr><br> <!-- Line Break -->
+	
+	<div class="grid-container" style="margin-bottom: 10px;">
+		<p>
+			The frequency and period data generated from the function generator in our lab was displayed on both the
+			7-segment displays on the FPGA and on the function generator itself, which allowed us to verify the values
+			being displayed on the FPGA.
+			<br><br>
+			In "Sample 1" the frequency was set to 1 KHz and by extension the period was set to 990&#956;s. In the image
+			shown our FPGA displayed "0990" on the left 4 segments and "0001", which is expected. 
+			<br><br>
+			Additionally, sample 2 was set to 2 KHz and 495&#956;s, which we were also able to verify on the FPGA. This 
+			time the 7-segment displays show "0495" and "0002" just as we expected.
+			<br><br>
+			More trials were ran to verify the data displayed, which are included in the full write up with additional
+			analysis. To view the full report for this project 
+			<strong><a href="web/viewer.html?file=FrequencyPeriodMeterReport.pdf"> click here. </a></strong>
+		</p>
+		<img src="FrequencyPeriodMeter/SampleOutput.png" alt="Sample Output" style="width:100%;height:auto;">
+	</div>
+	
+	<!-- --------------- -->
+	<!-- Location Finder -->
+	<!-- --------------- -->
+	<h2 id="3" class="sectionTitle"> Location Finder </h2>
+	<h3 class="dateLabel"> Technologies Used: C#, Visual Studio </h3>
+	<p>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+		[ Content ]
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</p>	
+	
+	<!-- Next Project Arrow Script -->
+	<script>
+		function nextProject(){
+			var iterVal = document.getElementById('iter').innerHTML;
+
+			// First element sets the arrow character to point downwards
+			if(iterVal == 0){ 
+				document.getElementById('0').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'}); 
+				document.getElementById('floatingButton').innerHTML = "&#8595";
+			}
+			
+			if(iterVal == 1){ document.getElementById('1').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});	}
+			if(iterVal == 2){ document.getElementById('2').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});	}
+			
+			// Last element sets the arrow character to point upwards
+			if(iterVal == 3){ 
+				document.getElementById('3').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+				document.getElementById('floatingButton').innerHTML = "&#8593";
+			}
+			
+			document.getElementById('iter').innerHTML = (+iterVal + +1) % 4;
+		}
+	</script>
+	
+</body>
+
+</html>

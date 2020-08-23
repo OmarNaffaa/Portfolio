@@ -1,0 +1,164 @@
+/* Banner Background Configurations */
+#bannerTitle {
+	color: #FFFFFF;
+	font-family: 'Quicksand';
+	font-size: 55px;
+	font-weight: bold;
+	margin: auto;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#bannerContact {
+	font-family: 'Arsenal';
+	color: #FFFFFF;
+	margin: auto;
+	text-align: left;
+	font-size: calc(90% + 0.5vh);
+}
+#banner {
+	margin-left: 0%;
+	margin-right: 0%;
+
+	background-color: #1e4d2b; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to bottom right, #4bc864, #000000);
+	background-size: 100% 100%;
+}
+
+body {
+	font-family: 'Arsenal';
+}
+
+h1 {
+	margin: 0px;
+}
+
+h2 {
+	margin: 0px;
+	scroll-margin: 80px;
+}
+
+p {
+	text-align: left;
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 2%;
+	margin-right: 2%;
+	padding: 25px;
+}
+
+u {
+  text-decoration: underline;
+}
+
+hr {
+	color: #1E4D2B;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+ul{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#floatingButton {
+	font-size: 32px;
+	background-color: #D3E3E9;
+	position: fixed;
+	z-index: 100;
+	width: 60px;
+	height: 60px;
+	bottom: 2%;
+	right: 2%;
+	border: none;
+	border-radius: 300px;
+	box-shadow: 10px 10px 5px grey;
+	outline: 0 !important;
+}
+
+#divAltColor {
+	background-color: #E7F3E7;
+}
+
+/* Force images to a certain size on the homepage */
+#projectGrid {
+	margin: auto;
+	display: block;
+	max-width:300px;
+	max-height:300px;
+	width: auto;
+	height: auto;
+	transition: transform .2s; /* Animation */
+}
+
+.pageTitle {
+	color: #FFFFFF;
+	background-color: #4B4B4B;
+	text-align: center;
+	padding: 10px;
+}
+
+.sectionTitle {
+	background-color: #D2D2D2;
+	text-align: center;
+	padding: 10px;
+}
+
+.dateLabel {
+	font-weight: normal;
+	font-style: italic;
+	background-color: #EAEAEA;
+	text-align: center;
+	padding: 5px;
+}
+
+/* CSS Grid Configurations */
+.grid-container {
+	display: grid;
+	grid-gap: 10px 10px;
+	grid-template-columns: auto auto;
+	margin-left: 2%;
+	margin-right: 2%;
+	padding: 10px;
+	text-align: left;
+}
+
+.gridLblItem {
+	padding: 10px;
+	background-color: #EDEDED;
+	font-size: calc(100% + 1.5vh);
+}
+
+.gridBtnItem {
+	font-size: calc(100% + 1.5vh);
+	color: #FFFFFF;
+	cursor: pointer;
+	padding-left: 8px;
+	padding-right: 8px;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+.gridBtnItem:hover {
+	border: 1px solid white;
+	border-radius: 10px;
+}	
+
+@media screen and (max-width: 1000px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto;
+	}
+}
+
+@media screen and (min-width: 1001px){
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+}
