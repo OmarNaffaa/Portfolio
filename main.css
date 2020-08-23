@@ -76,7 +76,9 @@ img{
 	bottom: 2%;
 	right: 2%;
 	border: none;
+	border-radius: 300px;
 	box-shadow: 10px 10px 5px grey;
+	outline: 0 !important;
 }
 
 #divAltColor {
