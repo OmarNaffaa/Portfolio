@@ -38,14 +38,10 @@
 	<!-- Title -->
 	<h1 class="pageTitle"> Projects </h1>
 	
-	<!-- Floating Arrow on Page -->
-	<p id="iter" style="display: none;"> 0 </p>
-	<button id="floatingButton" type="button" onclick="nextProject()"> &#8595; </button>
-	
 	<!-- --------------------------------- -->
 	<!-- 5G Self-Healing Network Simulator -->
 	<!-- --------------------------------- -->
-	<h2 id="0" class="sectionTitle"> 5G Self-Healing Network Simulator </h2>
+	<h2 class="sectionTitle"> 5G Self-Healing Network Simulator </h2>
 	<h3 class="dateLabel"> Technologies Used: C++, GTK+-3.0 </h3>
 	<p>
 		The purpose of this project is to simulate a network comprised of current technologies in order to test various self-healing and network 
@@ -136,7 +132,7 @@
 	<!-- ----- -->
 	<!-- DROWT -->
 	<!-- ----- -->
-	<h2 id="1" class="sectionTitle"> Decentralized Renewable Wastewater Treatment System (DROWT) </h2>
+	<h2 class="sectionTitle"> Decentralized Renewable Wastewater Treatment System (DROWT) </h2>
 	<h3 class="dateLabel"> Technologies Used: Java, Android Studio, REST, JSON </h3>
 	<div class="grid-container">
 		<img src="DROWT_Pictures/AndroidStudioLogo.png" alt="Android Studio Logo" style="width:100%;height:auto;">
@@ -202,7 +198,7 @@
 	<!-- --------------- -->
 	<!-- Frequency Meter -->
 	<!-- --------------- -->
-	<h2 id="2" class="sectionTitle"> Frequency / Period Meter </h2>
+	<h2 class="sectionTitle"> Frequency / Period Meter </h2>
 	<h3 class="dateLabel"> Technologies Used: Verilog, Xilinx Nexys A7 FPGA </h3>
 	
 	<p>
@@ -271,7 +267,7 @@
 	<!-- --------------- -->
 	<!-- Location Finder -->
 	<!-- --------------- -->
-	<h2 id="3" class="sectionTitle"> Location Finder </h2>
+	<h2 class="sectionTitle"> Location Finder </h2>
 	<h3 class="dateLabel"> Technologies Used: C#, Visual Studio </h3>
 	<p>
 		The location finder project shown is a C# Windows Form Application that aims to find an optimized path to traverse through
@@ -299,30 +295,6 @@
 		<br><br>
 		The full source code for this project can be viewed <strong><a href="https://github.com/OmarNaffaa/LocationFinder"> here </a></strong>
 	</p>
-	
-	<!-- Next Project Arrow Script -->
-	<script>
-		function nextProject(){
-			var iterVal = document.getElementById('iter').innerHTML;
-
-			// First element sets the arrow character to point downwards
-			if(iterVal == 0){ 
-				document.getElementById('0').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'}); 
-				document.getElementById('floatingButton').innerHTML = "&#8595";
-			}
-			
-			if(iterVal == 1){ document.getElementById('1').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});	}
-			if(iterVal == 2){ document.getElementById('2').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});	}
-			
-			// Last element sets the arrow character to point upwards
-			if(iterVal == 3){ 
-				document.getElementById('3').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-				document.getElementById('floatingButton').innerHTML = "&#8593";
-			}
-			
-			document.getElementById('iter').innerHTML = (+iterVal + +1) % 4;
-		}
-	</script>
 	
 </body>
 

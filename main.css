@@ -66,21 +66,6 @@ img{
 	margin-right: auto;
 }
 
-#floatingButton {
-	font-size: 32px;
-	background-color: #FFC252;
-	position: fixed;
-	z-index: 100;
-	width: 60px;
-	height: 60px;
-	bottom: 2%;
-	right: 2%;
-	border: none;
-	border-radius: 300px;
-	box-shadow: 10px 10px 5px grey;
-	outline: 0 !important;
-}
-
 #divAltColor {
 	background-color: #E7F3E7;
 	

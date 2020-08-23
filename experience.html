@@ -38,12 +38,8 @@
 	<!-- Title -->
 	<h1 class="pageTitle"> Work Experience </h1>
 	
-	<!-- Floating Arrow on Page -->
-	<p id="iter" style="display: none;"> 0 </p>
-	<button id="floatingButton" type="button" onclick="nextProject()"> &#8595; </button>
-	
 	<!-- Niagara Systems Engineering Experience Section -->
-	<h2 id="0" class="sectionTitle"> Systems Engineering Intern: Niagara Bottling </h2>
+	<h2 class="sectionTitle"> Systems Engineering Intern: Niagara Bottling </h2>
 	<h3 class="dateLabel"> May 2020 - Present </h3>
 	<div class="grid-container">
 		<img src="NiagaraInternship_2020_Images/ignition-scada-system_1.png" alt="Ignition SCADA System" style="width:100%;height:auto;">
@@ -90,7 +86,7 @@
 	</div>
 	
 	<!-- Niagara IT Experience Section -->
-	<h2 id="1" class="sectionTitle"> Warehouse Management Systems Intern: Niagara Bottling </h2>
+	<h2 class="sectionTitle"> Warehouse Management Systems Intern: Niagara Bottling </h2>
 	<h3 class="dateLabel"> June 2019 - August 2019 </h3>
 	
 	<p>
@@ -155,26 +151,6 @@
 		should be created. The system would communicate using the Modbus TCP/IP protocol to send information from the controller to a specified address. Updating the JNIORS in-house
 		eliminated the time delay of requesting an update from the company while also reducing the cost of updating the software using an outside resource. 
 	</p>
-	
-	<!-- Next Project Arrow Script -->
-	<script>
-		function nextProject(){
-			var iterVal = document.getElementById('iter').innerHTML;
-
-			// First element sets the arrow character to point downwards
-			if(iterVal == 0){ 
-				document.getElementById('0').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'}); 
-				document.getElementById('floatingButton').innerHTML = "&#8595";
-			}
-			// Last element sets the arrow character to point upwards
-			if(iterVal == 1){ 
-				document.getElementById('1').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-				document.getElementById('floatingButton').innerHTML = "&#8593";
-			}
-			
-			document.getElementById('iter').innerHTML = (+iterVal + +1) % 2;
-		}
-	</script>
 	
 </body>
 
