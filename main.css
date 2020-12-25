@@ -6,7 +6,6 @@
 	font-size: 55px;
 	font-weight: bold;
 	margin: auto;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 #bannerContact {
 	font-family: 'Arsenal';
@@ -19,8 +18,7 @@
 	margin-left: 0%;
 	margin-right: 0%;
 
-	background-color: #1e4d2b; /* For browsers that do not support gradients */
-	background-image: linear-gradient(to bottom right, #4bc864, #000000);
+	background-image: url("MiscImages/bg.jpg");
 	background-size: 100% 100%;
 }
 
@@ -69,7 +67,7 @@ img{
 }
 
 #divAltColor {
-	background-color: #E7F3E7;
+	background-color: #FFFFFF;
 	
 }
 
@@ -92,7 +90,8 @@ img{
 }
 
 .sectionTitle {
-	background-color: #D2D2D2;
+	color: #FFFFFF;
+	background-color: #1E4D2B;
 	text-align: center;
 	padding: 10px;
 }
@@ -100,7 +99,7 @@ img{
 .dateLabel {
 	font-weight: normal;
 	font-style: italic;
-	background-color: #EAEAEA;
+	background-color: #BFBFBF;
 	text-align: center;
 	padding: 5px;
 }
