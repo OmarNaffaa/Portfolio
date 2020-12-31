@@ -66,32 +66,38 @@
 			<i> Undergraduate Research: 2018 - 2020 </i>
 			<br><br>
 			This project aims to simulate a network comprised of current technologies in order to test various self-healing and network management strategies
-			in the hopes of implementing a digital network manager capable of detecting the “unhealthy/failing” cells present in a network to implement researched 
-			self-healing procedures. The simulator will accurately model channel conditions and model downlink communications between cellular towers and User Equipment (cell phones, computers, etc.).
-			The project centers around determining the optimal algorithms implemented at the management level for achieving this result using the constraints introduced
-			by the environment and technologies simulated.
+			in the hopes of implementing a digital network manager capable of detecting the “unhealthy/failing” cells present in a network to implement researched self-healing procedures.
+			<span id="project1">
+				The simulator will accurately model channel conditions and model downlink communications between cellular 
+				towers and User Equipment (cell phones, computers, etc.). The project centers around determining the optimal algorithms implemented at the management level 
+				for achieving this result using the constraints introduced by the environment and technologies simulated.
+				<br><br>
+				This project won <strong>best project</strong> within the Electrical and Computer Engineering department. A project overview video can be viewed
+				<strong><a href="https://www.youtube.com/watch?v=s30Yz3fSJMw&list=PLNV8XAzo8y_3RyNA_sNPMYtLZNhUcbWxa&index=42"> here. </a></strong>
+			</span>
 			<br><br>
-			This project won <strong>best project</strong> within the Electrical and Computer Engineering department. A project overview video can be viewed
-			<strong><a href="https://www.youtube.com/watch?v=s30Yz3fSJMw&list=PLNV8XAzo8y_3RyNA_sNPMYtLZNhUcbWxa&index=42"> here. </a></strong>
+			<label onclick="expandProject1()" id="expandProj1">(Read more)</label>
 		</p>
 	</div>
 	
-	<br><hr><br> <!-- Line Break -->
-	
-	<div id="divAltColor" class="grid-container" style="margin-top: 10px">
+	<div class="grid-container" id="divAltColor" style="margin-top: 10px">
 		<img id="projectGrid" src="DROWT_Pictures\DROWT_1.png" alt="DROWT Photo 1">
 		<p style="text-align: left;">
 			<strong> Decentralized Renewable Wastewater Treatment System (DROWT) </strong><br>
 			<i> Undergraduate Research: 2018 - 2019 </i>
-			
 			<br><br>
 			This project presents the development of a mock control system for an automated, self-sustaining, decentralized water treatment plant. The system is composed of an Arduino microcontroller
-			MKR1000 and an array of sensors linked to a mobile application to monitor different aspects of the system. The application lets the end user monitor the entire system and grants access
-			to the control of certain sensors. The system communicates with cloud based analytic software ThingSpeak to process and display system data on a mobile android application.
+			MKR1000 and an array of sensors linked to a mobile application to monitor different aspects of the system. 
+			<span id="project2">
+				The application lets the end user monitor the entire system and grants access to the control of certain sensors. The system communicates with 
+				cloud based analytic software ThingSpeak to process and display system data on a mobile android application.
+				<br><br>
+				This project was presented at COMPSAC 2019 and published in an IEEE Peer-Reviewed journal.
+				<br>
+				<strong><i>To see the full publication: <a href="https://ieeexplore.ieee.org/document/8754287"> click here </a></i></strong>
+			</span>
 			<br><br>
-			This project was presented at COMPSAC 2019 and published in an IEEE Peer-Reviewed journal.
-			<br>
-			<strong><i>To see the full publication: <a href="https://ieeexplore.ieee.org/document/8754287"> click here </a></i></strong>		
+			<label onclick="expandProject2()" id="expandProj2">(Read more)</label>	
 		</p>
 	</div>
 	
@@ -103,6 +109,39 @@
 	</p><br>
 	
 	<h2 class="sectionTitle" style="font-size: 20px; font-weight: normal;"><i> Last Updated: August 2020 </i></h2>
+	
+	<!-- Javascript Function --->
+	<script>
+		function expandProject1() 
+		{
+			var projOneText = document.getElementById("project1");
+			var projOneExpandText = document.getElementById("expandProj1");
+
+			if (projOneExpandText.innerHTML === "(Read less)") {
+				projOneExpandText.innerHTML = "(Read more)"; 
+				projOneText.style.display = "none";
+			} 
+			else {
+				projOneExpandText.innerHTML = "(Read less)"; 
+				projOneText.style.display = "inline";
+			}
+		}
+		
+		function expandProject2() 
+		{
+			var projTwoText = document.getElementById("project2");
+			var projTwoExpandText = document.getElementById("expandProj2");
+			
+			if (projTwoExpandText.innerHTML === "(Read less)") {
+				projTwoExpandText.innerHTML = "(Read more)"; 
+				projTwoText.style.display = "none";
+			} 
+			else {
+				projTwoExpandText.innerHTML = "(Read less)"; 
+				projTwoText.style.display = "inline";
+			}
+		}
+	</script>
 	
 </body>
 

@@ -52,16 +52,16 @@
 		and technologies simulated.
 	</p>
 	
-	<div id="divAltColor" class="grid-container">
-		<img src="5G_SHN_Pictures/SystemArchitecture.png" alt="System Architecture" style="width:100%;height:auto;">
-		<p>
-			During runtime the project goes through those 3 different stages: the initalization phase, simulation phase, and finally the output phase.
-			The programmed simulator takes in a pre-generatred array of Signal to Noise Ratio values from MATLAB and uses it within the C++ simulator.
-			The entire simulator is programmed in C++, and is composed of an interface programmed in GTK+-3.0 that allows the user to create a network
-			environment, enter network parameters for the simulation, and generate large amounts of CSV sheets that log the performance of the system.
-			A high level architecture diagram shows these phases.
-		</p>
-	</div>
+	<img src="5G_SHN_Pictures/SystemArchitecture.png" alt="System Architecture" style="width:70%;margin-left:15%;margin-right:15%;">
+	<p>
+		During runtime the project goes through those 3 different stages: the initalization phase, simulation phase, and finally the output phase.
+		The programmed simulator takes in a pre-generatred array of Signal to Noise Ratio values from MATLAB and uses it within the C++ simulator.
+		The entire simulator is programmed in C++, and is composed of an interface programmed in GTK+-3.0 that allows the user to create a network
+		environment, enter network parameters for the simulation, and generate large amounts of CSV sheets that log the performance of the system.
+		A high level architecture diagram shows these phases.
+	</p>
+	
+	<span id="project1">
 	
 	<br><hr><br> <!-- Line Break -->
 	
@@ -69,124 +69,107 @@
 		During the initalization phase the user can dynamically create a network structure with cellular towers represented by numbered hexagons by
 		clicking on the edge they would like to instantiate the tower from relative to the already placed towers. The user can also specify the
 		"health" of the tower as 1 of 4 states (Healthy, User Congested, Demand Congested, Failing).
+		The hexagons represent a sample network that was instantiated, and the numbers placed at the center of the hexagons represent the order 
+		in which the hexagons were created by the user.
+	</p>
+	<img src="5G_SHN_Pictures/5G_SHN_3.png" alt="tower structure" style="width:50%;margin-left:25%;margin-right:25%;height:auto;">
+	<p>
+		<br><br>
+		<u> The following conditions are depicted in the image above: </u>
+		<br><br>
+		<strong> Healthy </strong>: 
+		Celluar Towers 0, 1, 3, and 5
+		<br><br>
+		<strong> User Congested </strong>: 
+		Celluar Tower 2
+		<br><br>
+		<strong> Demand Congested </strong>: 
+		Celluar Tower 6
+		<br><br>
+		<strong> Failing </strong>: 
+		Celluar Tower 4
+		<br><br>
+		The currently selected hexagon will be a darker shade of the color it is configured to (e.g. cellular tower 0 is a darker green because it
+		is selected). Additional cellular towers are instantiated by moving the cursor to where you would like to add additional towers, which will
+		be indicated by a red highlight on the edge of the hexagon the newly added hexagon will be appended to. In the image, cellular tower 0 is
+		highlighted on the edge where cellular tower 5 is placed, so if cellular tower 5 is not present and the user clicks a new cellular tower
+		will be appended to that edge.
 	</p>
 	
-	<div id="divAltColor" class="grid-container">
-		<p>
-			The hexagons represent a sample network that was instantiated, and the numbers placed at the center of the hexagons represent the order 
-			in which the hexagons were created by the user.
-			<br><br>
-			<u> The following conditions are depicted in the image: </u>
-			<br><br>
-			<strong> Healthy </strong>: <br>
-			Celluar Towers 0, 1, 3, and 5
-			<br><br>
-			<strong> User Congested </strong>: <br>
-			Celluar Tower 2
-			<br><br>
-			<strong> Demand Congested </strong>: <br>
-			Celluar Tower 6
-			<br><br>
-			<strong> Failing </strong>: <br>
-			Celluar Tower 4
-			<br><br>
-			The currently selected hexagon will be a darker shade of the color it is configured to (e.g. cellular tower 0 is a darker green because it
-			is selected). Additional cellular towers are instantiated by moving the cursor to where you would like to add additional towers, which will
-			be indicated by a red highlight on the edge of the hexagon the newly added hexagon will be appended to. In the image, cellular tower 0 is
-			highlighted on the edge where cellular tower 5 is placed, so if cellular tower 5 is not present and the user clicks a new cellular tower
-			will be appended to that edge.
-		</p>
-		<img src="5G_SHN_Pictures/5G_SHN_3.png" alt="tower structure" style="width:100%;height:auto;">
-	</div>
-	
 	<br><hr><br> <!-- Line Break -->
-	
-	<div class="grid-container">
-		<img src="5G_SHN_Pictures/5G_SHN_2.png" alt="parameter entry" style="width:100%;height:auto;">
-		<p>
-			After creating the cellular tower network the user will be navigated to a page that lets them enter network parameters that will be used to set 
-			up the simulation. The required parameters are split into 3 categories: <u> Network Parameters, Simulation Parameters, and Self-Healing
-			Parameters. </u>
-			<br><br>
-			<strong> Network Parameters</strong>: <br>
-			Cellular Tower (BS) side length, Antennas per cellular tower, number of transceiver per antenna, and devices (UE) connected per antenna
-			<br><br>
-			<strong> Simulation Parameters </strong>: <br>
-			Length of simulation, number of simulations, the simulation starting number, and a field to specify a save name for the simulation output files
-			<br><br>
-			<strong> Self-Healing Parameters </strong>: <br>
-			Buffer size (used to determine how much data will be analyzed to perform self-healing in real-time)
-			<br><br>
-			Once these parameters are configured, clicking the "Run Simulation" button will begin the simulation process. Clicking the "Back" button allows you
-			to navigate back to the previous page. Note that both windows are responsive and can scale to fit multiple screen sizes.
-		</p>
-	</div>
-	
-	<br><hr><br> <!-- Line Break -->
-	
-	<p id="divAltColor" style="margin-bottom: 10px">
-		Once the simulation completes, a large number of CSV output files will be generated in the same directory as the project. This data is currently being used
-		for big data analytics. To view the full write-up for this project, <strong><a href="web/viewer.html?file=5G_SHN_Report.pdf"> click here. </a></strong>
+
+	<img src="5G_SHN_Pictures/5G_SHN_2.png" alt="parameter entry" style="width:80%;margin-left:10%;margin-right:10%;height:auto;">
+	<p>
+		After creating the cellular tower network the user will be navigated to a page that lets them enter network parameters that will be used to set 
+		up the simulation. The required parameters are split into 3 categories: <u> Network Parameters, Simulation Parameters, and Self-Healing
+		Parameters. </u>
+		<br><br>
+		<strong> Network Parameters</strong>: <br>
+		Cellular Tower (BS) side length, Antennas per cellular tower, number of transceiver per antenna, and devices (UE) connected per antenna
+		<br><br>
+		<strong> Simulation Parameters </strong>: <br>
+		Length of simulation, number of simulations, the simulation starting number, and a field to specify a save name for the simulation output files
+		<br><br>
+		<strong> Self-Healing Parameters </strong>: <br>
+		Buffer size (used to determine how much data will be analyzed to perform self-healing in real-time)
+		<br><br>
+		Once these parameters are configured, clicking the "Run Simulation" button will begin the simulation process. Clicking the "Back" button allows you
+		to navigate back to the previous page. Note that both windows are responsive and can scale to fit multiple screen sizes.
 	</p>
+	
+	</span>
+	<label style="font-size:24px;margin-left:4%" onclick="expandProject1()" id="expandProj1">(Read more)</label>
+	<br><br>
 	
 	<!-- ----- -->
 	<!-- DROWT -->
 	<!-- ----- -->
 	<h2 class="sectionTitle"> Decentralized Renewable Wastewater Treatment System (DROWT) </h2>
 	<h3 class="dateLabel"> Technologies Used: Java, Android Studio, REST, JSON </h3>
-	<div class="grid-container">
-		<img src="DROWT_Pictures/AndroidStudioLogo.png" alt="Android Studio Logo" style="width:100%;height:auto;">
-		<p>
-			This project presents the development of a mock control system for an automated, self-sustaining, decentralized water treatment plant called 
-			<strong>"DROWT"</strong> for short. The system is composed of an Arduino microcontroller MKR1000 and an array of sensors linked to a mobile application 
-			to monitor different aspects of the system. The application lets the end user monitor the entire system and grants access to the control of certain 
-			sensors. The system communicates with cloud based analytic software ThingSpeak to process and display system data on a mobile android application.
-			<br><br>
-			For this project I served as the sole developer of the mobile application. The application itself was developed entirely in Java using
-			Android Studio and standard material design principles.
-		</p>
-	</div>
+	<p>
+		This project presents the development of a mock control system for an automated, self-sustaining, decentralized water treatment plant called 
+		<strong>"DROWT"</strong> for short. The system is composed of an Arduino microcontroller MKR1000 and an array of sensors linked to a mobile application 
+		to monitor different aspects of the system. The application lets the end user monitor the entire system and grants access to the control of certain 
+		sensors. The system communicates with cloud based analytic software ThingSpeak to process and display system data on a mobile android application.
+		<br><br>
+		For this project I served as the sole developer of the mobile application. The application itself was developed entirely in Java using
+		Android Studio and standard material design principles.
+	</p>
+	<img src="DROWT_Pictures/AllAppPages.png" alt="Android Studio Logo" style="width:91%;margin-left:4%;margin-right:5%;height:auto;">
 	
-	<br><hr><br> <!-- Line Break -->
+	<span id="project2">
 	
-	<div id="divAltColor" class="grid-container">
-		<p>
-			From left to right the following pages are shown:
-			<br><br>
-			<strong> HomePage </strong>: <br>
-			This is the central page that appears once the user enters the application. It contains information from the water going to a preselected DROWT system,
-			including the temperature, flow rate, pressure, conductivity, and water tank specifications (height of container and amount filled). Two buttons are
-			placed at the bottom to navigate to the "Pump Control" and "System Select" pages.
-			<br><br>
-			<strong> Pump Control </strong>: <br>
-			Clicking the "Pump Controls" button from the homepage displays the current status of the pump and provides the user the option to turn the pump on or off 
-			remotely instead of having to do this in-person. Future controls are planned, so this page was added later in development to centralize all current and 
-			future controls in one place.
-			<br><br>
-			<strong> System Select </strong>: <br>
-			Using the "System Select" button on the homepage leads the user to a page that allows them to perform administrator functions within the application. The
-			user can type in the name of a system on the list and either select that system to display it's information on the other pages or click the "details"
-			button to view specific information about this system. Additionally, if a user types in the system name and clicks the "delete" button that system
-			will be removed from the list of systems on the app. If a system needs to be added to the list the user can click the "add" button and fill in the
-			appropriate information to add the system.
-		</p>
-		<img src="DROWT_Pictures/AllAppPages.png" alt="Android Studio Logo" style="width:100%;height:auto;">
-	</div>
+	<p>
+		From left to right (in the image above) the following pages are shown:
+		<br><br>
+		<strong> HomePage </strong>: <br>
+		This is the central page that appears once the user enters the application. It contains information from the water going to a preselected DROWT system,
+		including the temperature, flow rate, pressure, conductivity, and water tank specifications (height of container and amount filled). Two buttons are
+		placed at the bottom to navigate to the "Pump Control" and "System Select" pages.
+		<br><br>
+		<strong> Pump Control </strong>: <br>
+		Clicking the "Pump Controls" button from the homepage displays the current status of the pump and provides the user the option to turn the pump on or off 
+		remotely instead of having to do this in-person. Future controls are planned, so this page was added later in development to centralize all current and 
+		future controls in one place.
+		<br><br>
+		<strong> System Select </strong>: <br>
+		Using the "System Select" button on the homepage leads the user to a page that allows them to perform administrator functions within the application. The
+		user can type in the name of a system on the list and either select that system to display it's information on the other pages or click the "details"
+		button to view specific information about this system. Additionally, if a user types in the system name and clicks the "delete" button that system
+		will be removed from the list of systems on the app. If a system needs to be added to the list the user can click the "add" button and fill in the
+		appropriate information to add the system.
+	</p>
 	
-	<br><hr><br> <!-- Line Break -->
-	
-	<div class="grid-container">
-		<img src="DROWT_Pictures/ThingSpeakImages.png" alt="ThingSpeakImages" style="width:100%;height:auto;">
-		<p>
-			Data set to the application is from our mock system (and vice versa) are sent using the ThingSpeak REST API service, which also logs data points sent
-			by the mock system.
-			<br><br>
-			This recorded data will be used by the Civil and Mechanical Engineering team who we collaborated on this project with. Uses include visualizing the data
-			and tracking / predicting irregularities within the system in order to make future improvements and optimizations.
-			<br><br>
-			Shown here are sample images taken from ThingSpeak that show the tracked temperature and tank fill level vs the date they were recorded.	
-		</p>
-	</div>
+	<img src="DROWT_Pictures/ThingSpeakImages.png" alt="ThingSpeakImages" style="width:91%;margin-left:4%;margin-right:5%;height:auto;">
+	<p>
+		Data set to the application is from our mock system (and vice versa) are sent using the ThingSpeak REST API service, which also logs data points sent
+		by the mock system.
+		<br><br>
+		This recorded data will be used by the Civil and Mechanical Engineering team who we collaborated on this project with. Uses include visualizing the data
+		and tracking / predicting irregularities within the system in order to make future improvements and optimizations.
+		<br><br>
+		Shown here are sample images taken from ThingSpeak that show the tracked temperature and tank fill level vs the date they were recorded.	
+	</p>
 	
 	<br><hr><br> <!-- Line Break -->	
 	
@@ -194,6 +177,11 @@
 		This project was presented at COMPSAC 2019, a international IEEE Computer Society conference and later published in a peer reviewed journal through IEEE. 
 		To see the full publication <strong><i><a href="https://ieeexplore.ieee.org/document/8754287"> click here </a></i></strong>
 	</p>
+	
+	</span>
+	<br>
+	<label style="font-size:24px;margin-left:4%" onclick="expandProject2()" id="expandProj2">(Read more)</label>
+	<br><br>
 	
 	<!-- --------------- -->
 	<!-- Frequency Meter -->
@@ -226,43 +214,43 @@
 		7-segment display on the FPGA.
 	</p>
 	
-	<br><hr><br> <!-- Line Break -->
+	<img src="FrequencyPeriodMeter/BlockDiagram.png" alt="Block Diagram" style="width:91%;margin-left:4%;margin-right:5%;height:auto;">
 	
-	<div id="divAltColor" class="grid-container">
-		<img src="FrequencyPeriodMeter/BlockDiagram.png" alt="Block Diagram" style="width:100%;height:auto;">
-		<p>
-			The following image shows a high level block diagram of what was described above. 
-			<br><br>
-			The <strong> Frequency Meter </strong> and <strong> Period Meter </strong> blocks were connected to
-			a function generator present in our university labs and a Digital to Analog converter module attached to
-			our FPGA to generate a desired frequency and period. These values are then passed into the <strong> B2BCD 
-			</strong> module of the application, which decodes the 10 bit binary value representing the frequency 
-			and period into a 32 bit BCD value. The <strong> Display Controller </strong> module is used to translate 
-			and pass the value to the <strong> Display Interface </strong> module, which performs the multiplexing 
-			required to display our processed frequency and period from the connected function generator.
-		</p>
-	</div>
+	<span id="project3">
 	
-	<br><hr><br> <!-- Line Break -->
+	<p>
+		The following image shows a high level block diagram of what was described above. 
+		<br><br>
+		The <strong> Frequency Meter </strong> and <strong> Period Meter </strong> blocks were connected to
+		a function generator present in our university labs and a Digital to Analog converter module attached to
+		our FPGA to generate a desired frequency and period. These values are then passed into the <strong> B2BCD 
+		</strong> module of the application, which decodes the 10 bit binary value representing the frequency 
+		and period into a 32 bit BCD value. The <strong> Display Controller </strong> module is used to translate 
+		and pass the value to the <strong> Display Interface </strong> module, which performs the multiplexing 
+		required to display our processed frequency and period from the connected function generator.
+	</p>
 	
-	<div class="grid-container" style="margin-bottom: 10px;">
-		<p>
-			The frequency and period data generated from the function generator in our lab was displayed on both the
-			7-segment displays on the FPGA and on the function generator itself, which allowed us to verify the values
-			being displayed on the FPGA.
-			<br><br>
-			In "Sample 1" the frequency was set to 1 KHz and by extension the period was set to 990&#956;s. In the image
-			shown our FPGA displayed "0990" on the left 4 segments and "0001", which is expected. 
-			<br><br>
-			Additionally, sample 2 was set to 2 KHz and 495&#956;s, which we were also able to verify on the FPGA. This 
-			time the 7-segment displays show "0495" and "0002" just as we expected.
-			<br><br>
-			More trials were ran to verify the data displayed, which are included in the full write up with additional
-			analysis. To view the full report for this project 
-			<strong><a href="web/viewer.html?file=FrequencyPeriodMeterReport.pdf"> click here. </a></strong>
-		</p>
-		<img src="FrequencyPeriodMeter/output.png" alt="Sample Output" style="width:100%;height:auto;">
-	</div>
+	<p>
+		The frequency and period data generated from the function generator in our lab was displayed on both the
+		7-segment displays on the FPGA and on the function generator itself, which allowed us to verify the values
+		being displayed on the FPGA.
+		<br><br>
+		In "Sample 1" the frequency was set to 1 KHz and by extension the period was set to 990&#956;s. In the image
+		shown our FPGA displayed "0990" on the left 4 segments and "0001", which is expected. 
+		<br><br>
+		Additionally, sample 2 was set to 2 KHz and 495&#956;s, which we were also able to verify on the FPGA. This 
+		time the 7-segment displays show "0495" and "0002" just as we expected.
+		<br><br>
+		More trials were ran to verify the data displayed, which are included in the full write up with additional
+		analysis. To view the full report for this project 
+		<strong><a href="web/viewer.html?file=FrequencyPeriodMeterReport.pdf"> click here. </a></strong>
+	</p>
+	<img src="FrequencyPeriodMeter/output.png" alt="Sample Output" style="width:91%;margin-left:4%;margin-right:5%;height:auto;">
+	
+	</span>
+	<br>
+	<label style="font-size:24px;margin-left:4%" onclick="expandProject3()" id="expandProj3">(Read more)</label>
+	<br><br>
 	
 	<!-- --------------- -->
 	<!-- Location Finder -->
@@ -276,13 +264,7 @@
 		pool. This is done by calculating the nearest direct path from the current destination of the repair man to a next destination.
 	</p>
 	
-	<br><hr><br> <!-- Line Break -->
-	
-	<div style="margin-left: 2%; margin-right: 2%;" id="divAltColor">
-		<img src="LocationFinder/LocationFinderMainPage.png" alt="Location Finder Main Page" style="width:94%;height:auto;margin:2%;">
-	</div>
-	
-	<br><hr><br> <!-- Line Break -->
+	<img src="LocationFinder/LocationFinderMainPage.png" alt="Location Finder Main Page" style="width:91%;height:auto;margin-left:4%;margin-right:5%">
 	
 	<p>
 		In the default configuration shown belowthe repair man would have to traverse the pools in the order "B, C, G, A, F, E,  
@@ -295,6 +277,69 @@
 		<br><br>
 		The full source code for this project can be viewed <strong><a href="https://github.com/OmarNaffaa/LocationFinder"> here </a></strong>
 	</p>
+	
+	<!-- Javascript Function --->
+	<script>
+		function expandProject1() 
+		{
+			var projOneText = document.getElementById("project1");
+			var projOneExpandText = document.getElementById("expandProj1");
+
+			if (projOneExpandText.innerHTML === "(Read less)") {
+				projOneExpandText.innerHTML = "(Read more)"; 
+				projOneText.style.display = "none";
+			} 
+			else {
+				projOneExpandText.innerHTML = "(Read less)"; 
+				projOneText.style.display = "inline";
+			}
+		}
+		
+		function expandProject2() 
+		{
+			var projTwoText = document.getElementById("project2");
+			var projTwoExpandText = document.getElementById("expandProj2");
+			
+			if (projTwoExpandText.innerHTML === "(Read less)") {
+				projTwoExpandText.innerHTML = "(Read more)"; 
+				projTwoText.style.display = "none";
+			} 
+			else {
+				projTwoExpandText.innerHTML = "(Read less)"; 
+				projTwoText.style.display = "inline";
+			}
+		}
+		
+		function expandProject3() 
+		{
+			var projThreeText = document.getElementById("project3");
+			var projThreeExpandText = document.getElementById("expandProj3");
+			
+			if (projThreeExpandText.innerHTML === "(Read less)") {
+				projThreeExpandText.innerHTML = "(Read more)"; 
+				projThreeText.style.display = "none";
+			} 
+			else {
+				projThreeExpandText.innerHTML = "(Read less)"; 
+				projThreeText.style.display = "inline";
+			}
+		}
+		
+		function expandProject4() 
+		{
+			var projFourText = document.getElementById("project4");
+			var projFourExpandText = document.getElementById("expandProj4");
+			
+			if (projFourExpandText.innerHTML === "(Read less)") {
+				projFourExpandText.innerHTML = "(Read more)"; 
+				projFourText.style.display = "none";
+			} 
+			else {
+				projFourExpandText.innerHTML = "(Read less)"; 
+				projFourText.style.display = "inline";
+			}
+		}
+	</script>
 	
 </body>
 
