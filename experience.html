@@ -38,18 +38,34 @@
 	<!-- Title -->
 	<h1 class="pageTitle"> Work Experience </h1>
 	
+	<!-- Niagara Supply Chain Experience Section -->
+	<h2 class="sectionTitle"> RPA Developer Intern: Niagara Bottling </h2>
+	<h3 class="dateLabel"> October 2020 - Present </h3>
+	
+	<div id="divAltColor" class="grid-container">
+		<img src="NiagaraInternship_2020_Images/AutomationAnywhere.jpg" alt="[ Missing Image ]">
+		<p>
+			Currently, I am a Robotic Process Automation (RPA) Developer intern for the continuous improvement team within the supply chain department at Niagara Bottling, LLC. 
+			By leveraging Automation Anywhere and Excel VBA I am able to remove tedious and manually intensive tasks from the workflow of supply chain team members at the company,
+			automating processes ranging from scheduling 40+ purchase orders a day to automating the end-to-end process of requesting business reports from the company server.
+			<br><br>
+			Within this role I was able to utilize my project management abilities to complete automation bots requested by department team members by owning the process from 
+			beginning to end; this includes gathering bot requirements, developing the bot and accompanying Excel macros, testing, deployment, and documentation. Additionally,
+			I am responsible for performing routine maintenance on bots I have deployed in order to ensure proper operation during run-time.
+			<br><br>
+			In total, I have fully developed 6 bots that save the department approximately 4 hours of a team member's labor per day.
+		</p>
+	</div>
+	
 	<!-- Niagara Systems Engineering Experience Section -->
 	<h2 class="sectionTitle"> Systems Engineering Intern: Niagara Bottling </h2>
-	<h3 class="dateLabel"> May 2020 - Present </h3>
+	<h3 class="dateLabel"> May 2020 - October 2020 </h3>
 	
 	<p>
-		Currently, I am a Systems Engineering intern for the Digitalization team within Niagara Bottling, LLC. The main purpose of this role
+		At Niagara Bottling I served as a Systems Engineering intern for the Digitalization team within Niagara Bottling, LLC. The main purpose of this role
 		is to utilize the Ignition Supervisory Control And Data Acquisition (SCADA) platform to visualize data collected from PLCs within the
 		plants throughout the company and create high performance, responsive Human Machine Interfaces (HMIs) to aid various departments within
 		the company.
-	</p>
-
-	<p>
 		During this past summer, I was given 2 primary projects to work on along with many day-to-day tasks. My primary projects include:
 		<br><br>
 		<strong> Gateway Automation User Interface (UI) </strong>: <br>
@@ -161,7 +177,7 @@
 	<label style="font-size:24px;margin-left:4%" onclick="expandProject2()" id="expandProj2">(Read more)</label>
 	<br><br>
 	
-	<!-- Javascript Function --->
+	<!-- Javascript Functions --->
 	<script>
 		function expandProject1() 
 		{
@@ -190,6 +206,21 @@
 			else {
 				projTwoExpandText.innerHTML = "(Read less)"; 
 				projTwoText.style.display = "inline";
+			}
+		}
+		
+		function expandProject3() 
+		{
+			var projThreeText = document.getElementById("project3");
+			var projThreeExpandText = document.getElementById("expandProj3");
+			
+			if (projThreeExpandText.innerHTML === "(Read less)") {
+				projThreeExpandText.innerHTML = "(Read more)"; 
+				projThreeText.style.display = "none";
+			} 
+			else {
+				projThreeExpandText.innerHTML = "(Read less)"; 
+				projThreeText.style.display = "inline";
 			}
 		}
 	</script>

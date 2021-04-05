@@ -1,0 +1,41 @@
+body {
+	font-family: 'Arsenal';
+}
+
+/* Float four columns side by side */
+.column {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 12%;
+	margin-right: 12%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+	grid-gap: 25px;
+	justify-content: center;
+}
+
+/* Style the counter cards */
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+
+.cardHeader {
+	text-align: center;
+	font-family: 'Arsenal';
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+/* Force images to a certain size on the homepage */
+#cardImage {
+	margin: auto;
+	display: block;
+	max-width:300px;
+	max-height:300px;
+	width: auto;
+	height: 300px;
+	transition: transform .2s; /* Animation */
+}
