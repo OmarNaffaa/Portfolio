@@ -1,9 +1,9 @@
 
 /* Banner Background Configurations */
 #bannerTitle {
-	color: #FFFFFF;
+	color: #000000;
 	font-family: 'Roboto Light';
-	font-size: 72px;
+	font-size: 24px;
 	font-weight: bold;
 	margin: auto;
 	text-align: center;
@@ -15,22 +15,26 @@
 	text-align: center;
 	font-size: 20px;
 }
-#banner {
-	margin-left: 0%;
-	margin-right: 0%;
 
-	background-image: url("MiscImages/bg.jpg");
-	background-size: 100% 100%;
-}
-
-.projectPictures {
+#headshotImage {
 	display:block;
 	width:auto;
 	height:auto;
 	margin-left:auto;
 	margin-right:auto;
 	max-width:90%;
-	max-height: 500px;
+	max-height: 300px;
+	border-radius: 200px;
+}
+
+#divStyle1 {
+	color: #FFFFFF;
+	background-color: #505050;
+}
+
+#divStyle2 {
+	color: #000000;
+	background-color: #F5F5F5;
 }
 
 body {
@@ -76,6 +80,8 @@ img{
 	margin-right: auto;
 }
 
+a { color: inherit; } 
+
 /* Force images to a certain size on the homepage */
 #projectGrid {
 	margin: auto;
@@ -87,26 +93,28 @@ img{
 	transition: transform .2s; /* Animation */
 }
 
+.projectPictures {
+	display:block;
+	width:auto;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:90%;
+	max-height: 500px;
+}
+
 .pageTitle {
+	font-size: 40px;
 	color: #FFFFFF;
-	background-color: #4B4B4B;
+	background-color: #003A02;
 	text-align: center;
 	padding: 10px;
 }
 
 .sectionTitle {
-	color: #FFFFFF;
-	background-color: #1E4D2B;
+	font-size: 32px;
 	text-align: center;
 	padding: 10px;
-}
-
-.dateLabel {
-	font-weight: normal;
-	font-style: italic;
-	background-color: #BFBFBF;
-	text-align: center;
-	padding: 5px;
 }
 
 /* CSS Grid Configurations */

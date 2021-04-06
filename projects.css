@@ -5,11 +5,11 @@ body {
 /* Float four columns side by side */
 .column {
 	margin-top: 2%;
-	margin-bottom: 2%;
-	margin-left: 12%;
-	margin-right: 12%;
+	margin-bottom: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 25px;
 	justify-content: center;
 }
@@ -23,8 +23,9 @@ body {
 }
 
 .cardHeader {
+	font-size: 20px;
 	text-align: center;
-	font-family: 'Arsenal';
+	font-family: 'Roboto Light';
 	font-weight: bold;
 	margin-bottom: 10px;
 }
@@ -33,9 +34,9 @@ body {
 #cardImage {
 	margin: auto;
 	display: block;
-	max-width:300px;
-	max-height:300px;
+	max-width:200px;
+	max-height:200px;
 	width: auto;
-	height: 300px;
+	height: 200px;
 	transition: transform .2s; /* Animation */
 }
